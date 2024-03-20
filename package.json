@@ -1,0 +1,14 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "projet Ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "npx sass --watch ./sass/style.scss:./css/style.css"
+  },
+  "author": "Galarreta Maxime",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.71.1"
+  }
+}
