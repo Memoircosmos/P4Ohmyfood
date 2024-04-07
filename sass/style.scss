@@ -1,5 +1,91 @@
 @import "./resto.scss";
 
-P {
-    color: blue;
+@mixin button-style {
+    opacity: 1;
+    background: linear-gradient(to top, #9356DC , #FF79DA) ;
+    color: white;
+    padding: 0 20px;
+    border-radius: 200px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+    width: 218px;
+    height: 50px;
+}
+
+@mixin button-hover {
+    opacity: 0.8;
+    cursor: pointer;
+    transition: .3s;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);
+}
+
+body {
+    margin: 0;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+
+}
+
+.sizelogo {
+width: 165px;
+padding-bottom: 15px;
+padding-top: 15px;
+}
+
+.city {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EAEAEA;
+    width: 100%;
+    box-shadow: 0px 4px 4px 0px rgba(120, 119, 119, 0.877);
+    
+}
+
+.city span {
+    padding-right: 17px;
+    
+}
+
+.reserv {
+    background: #fafafa;
+    width: 100%;
+}
+.reserv_container {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    flex-direction: column;
+    padding: 50px 0;
+}
+
+.reserv_title {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.reserv_text {
+    text-align: center;
+}
+
+.reserv_button {
+    margin: 0 auto;
+    width: 50%;
+    @include button-style;
+    &:hover {
+        @include button-hover;
+    }
+    
+}
+.reserv_button p {
+    transform: translateY(70%);
+    margin: 0 auto;
+    width: 180px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
 }
