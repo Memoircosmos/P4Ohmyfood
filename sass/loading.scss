@@ -1,0 +1,89 @@
+.loading-spinner-container {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    opacity: 0.95;
+    animation: loading-appear 4s both ease-in-out;
+    z-index: 21;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-spinner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 290px;
+    min-width: 290px;
+    height: 290px;
+    @include circle;
+    background: $gradient-loader;
+    z-index: 0;
+    animation: rotate-gradient 3s infinite;
+
+    &::after {
+        z-index: 0;
+        position: absolute;
+        content: "";
+        width: 85%;
+        height: 85%;
+        background-color: white;
+        @include circle;
+    }
+
+    &__border {
+        z-index: -1;
+        position: absolute;
+        width: 290px;
+        height: 290px;
+        background-color: darken(white, 10%);
+        @include circle;
+    }
+
+    &__plate {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 120px;
+        height: 120px;
+        border: 4px solid darken(white, 60%);
+        background-color: darken(white, 65%);
+        margin: 0% 2%;
+        @include circle;
+        z-index: 3;
+
+        &::before {
+            position: absolute;
+            display: flex;
+            width: 93%;
+            height: 93%;
+            @include circle;
+            border-bottom: 2px solid white;
+            background-color: transparent;
+            transform: rotate(-25deg);
+            overflow: hidden;
+            content: "";
+        }
+
+        &::after {
+            position: absolute;
+            display: flex;
+            width: 75%;
+            height: 75%;
+            @include circle;
+            border: 4px solid white;
+            background-color: darken(white, 75%);
+            overflow: hidden;
+            content: "";
+        }
+    }
+
+}

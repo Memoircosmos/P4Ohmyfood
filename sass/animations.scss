@@ -1,0 +1,24 @@
+@keyframes loading-appear {
+    50% {
+        opacity: 0.95;
+    }
+
+    99% {
+        z-index: 21;
+    }
+
+    100% {
+        opacity: 0;
+        z-index: -20;
+    }
+}
+
+@keyframes rotate-gradient {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

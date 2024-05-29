@@ -4,6 +4,7 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $gradient : linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+$gradient-loader : linear-gradient(to top, lighten($color-primary, 10%), $color-secondary, transparent, transparent);
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -324,13 +325,13 @@ header {
     }
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 768px) {
     .menu {
         margin-top: -60px;
     }
     .menu__grid {
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        /*grid-template-columns: repeat(3,1fr);*/
         grid-template-rows: 1fr;
     }
     .img__image {
