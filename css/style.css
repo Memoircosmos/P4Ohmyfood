@@ -88,6 +88,7 @@ header .header__logo a {
   stroke: black;
   fill: white;
   cursor: pointer;
+  transition: 0.5s;
 }
 .menu__header__heart .heart-full {
   position: absolute;
@@ -99,7 +100,6 @@ header .header__logo a {
 }
 .menu__header__heart .heart-empty:hover {
   opacity: 0;
-  transition: 0.5s;
 }
 .menu__grid {
   display: grid;
@@ -141,27 +141,29 @@ header .header__logo a {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: slide-left 0.5s ease;
-  transform-origin: right;
+  visibility: visible;
+  transform: scaleX(1);
 }
 .menu__grid__case:hover .menu__case__price {
   padding-right: 70px;
   transition: 0.5s ease;
 }
 .menu__grid__case .validation__box {
-  display: none;
+  /*display: none;*/
   position: absolute;
   background: #99E2D0;
   border-radius: 0 15px 15px 0;
   right: 0px;
   padding: 0 13px;
   height: 100%;
+  visibility: hidden;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease;
 }
 .menu__grid__case .validation__box i {
   font-size: 30px;
   color: white;
-  /*******transform: rotate(180deg);
-  animation: rotate 0.5s both;*****/
 }
 .menu__case__dish {
   margin-left: 20px;
@@ -180,6 +182,7 @@ header .header__logo a {
   padding-right: 20px;
   font-weight: bold;
   padding-left: 7px;
+  transition: 0.5s ease;
 }
 .menu__contain-button {
   display: flex;
@@ -626,6 +629,8 @@ a {
   border-radius: 20px;
   transform: scale(1);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+  height: 300px;
 }
 .restaurant__card-new {
   display: flex;
@@ -642,7 +647,6 @@ a {
   margin: 0;
 }
 .restaurant__card:hover {
-  transition: 0.5s;
   transform: scale(1.02);
 }
 .restaurant__card-image {
@@ -665,6 +669,7 @@ a {
   width: 100%;
   height: 90px;
   border-radius: 0 0 20px 20px;
+  height: 110px;
 }
 .restaurant__block-info {
   color: black;
@@ -695,10 +700,10 @@ a {
 .restaurant__block .heart-empty {
   width: 50px;
   position: relative;
+  transition: 0.5s;
 }
 .restaurant__block .heart-empty:hover {
   opacity: 0;
-  transition: 0.5s;
 }
 
 /***************Pied*******************/
@@ -714,6 +719,7 @@ a {
   padding: 0 40px;
   width: 100%;
   max-width: 1200px;
+  padding-top: 10px;
 }
 .footer-container__bloc .logo-footer {
   color: var(--White, #FFF);

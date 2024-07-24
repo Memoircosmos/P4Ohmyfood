@@ -91,6 +91,7 @@ header {
                 stroke: black;
                 fill: white;
                 cursor: pointer;
+                transition: 0.5s;
               }
               .heart-full {
               position: absolute;
@@ -101,7 +102,7 @@ header {
                 position: relative; 
                 &:hover {
                   opacity: 0;
-                  transition: 0.5s;
+            
                 }
               
             }
@@ -144,28 +145,38 @@ header {
             box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.1);
             &:hover .validation__box {
                 @include flexbox-center-menu;
-                animation: slide-left 0.5s ease ;
-                transform-origin: right;
+                visibility: visible;
+                transform: scaleX(1);
+                
             }
+
             &:hover .menu__case__price {
                 padding-right: 70px;
                 transition: 0.5s ease ;
             }
             .validation__box {
-                display: none;
+                /*display: none;*/
                 position: absolute;
                 background: $color-tertiary;
                 border-radius: 0 15px 15px 0;
                 right: 0px;
                 padding: 0 13px;
                 height: 100%;
+                visibility: hidden;
+                transform: scaleX(0);
+                transform-origin: right;
+                transition: transform 0.5s ease;
+                
                 i {
                     font-size: 30px;
                     color: white;
-                    /*******transform: rotate(180deg);
-                    animation: rotate 0.5s both;*****/
+                
                 }
+
+
             }
+
+            
         }
 
 
@@ -190,6 +201,7 @@ header {
             padding-right: 20px;
             font-weight: bold;
             padding-left: 7px;
+            transition: 0.5s ease ;
         }
     }
     &__contain-button {
@@ -206,6 +218,7 @@ header {
         }
     }
 }
+
 
 .dish-and-price {
     width: 100%;
