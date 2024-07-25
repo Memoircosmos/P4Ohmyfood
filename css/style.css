@@ -141,29 +141,36 @@ header .header__logo a {
   display: flex;
   justify-content: center;
   align-items: center;
-  visibility: visible;
-  transform: scaleX(1);
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 .menu__grid__case:hover .menu__case__price {
   padding-right: 70px;
   transition: 0.5s ease;
 }
 .menu__grid__case .validation__box {
-  /*display: none;*/
   position: absolute;
   background: #99E2D0;
   border-radius: 0 15px 15px 0;
   right: 0px;
+  top: 0px;
+  bottom: 0px;
   padding: 0 13px;
   height: 100%;
-  visibility: hidden;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.5s ease;
+  width: auto;
+  min-width: 50px;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 .menu__grid__case .validation__box i {
   font-size: 30px;
   color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .menu__case__dish {
   margin-left: 20px;
